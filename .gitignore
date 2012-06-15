@@ -1,3 +1,4 @@
 .pyc
+examples/*.png
 .virtualenv
 

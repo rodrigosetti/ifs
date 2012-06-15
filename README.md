@@ -31,21 +31,25 @@ I wanted to learn more about the pure functional Haskell programming
 language as well as about this beautiful fractal like mathematical
 structures.
 
-The system are configured by JSON files, _e. g._:
+The system are configured by Python files, _e. g._:
 
-    {
-        "functions": {
-            .1: [0.12, .9,  0  ],
-            .7: [1.1 , .25, 0  ],
-            .2: [0   , .2,  .16]
-        }
-        "width" : 800,
-        "height": 600
+    iterations = 28
+
+    width = 800
+    heigth = 600
+
+    transformations = {
+        1:  lambda x, y, z: (0, .16*y, 0),
+        7:  lambda x, y, z: (.2*x -.26*y, .23*x + .22*y + 1.6, 0),
+        7:  lambda x, y, z: (-.15*x + .28*y, .26*x + .24*y + .44, 0),
+        85: lambda x, y, z: (.85*x + .04*y, -.04*x + .85*y + 1.6, 0)
     }
 
-The system is defined by the "functions" object. It's a mapping
-of probability to the linear function coefficients. The terms the
-coefficients refer to are `x`, `y` and `1` (constant) respectively.
+The system is defined by the "transformations" dictionary. It's a mapping
+of probability to the transformation lambda function. Each dictionary
+key is a proportional probability of that transformation to occur, and
+each function must accept three numerical parameters and return the same
+structure as a list like object.
 
 The sum of the probability keys are not necessary to sum to unity, as
 the probability is calculated proportionally (_i. e._ roulette wheel).
