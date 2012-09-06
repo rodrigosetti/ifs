@@ -21,7 +21,7 @@ http://en.wikipedia.org/wiki/Iterated_function_system )
 What is this Project?
 ---------------------
 
-This project is a Haskell implementation of a kind of IFS. Each system
+This project is a Python implementation of a kind of IFS. Each system
 is a stochastic composition of two-dimensional linear functions.
 
 Why?
