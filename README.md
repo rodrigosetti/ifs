@@ -21,35 +21,34 @@ http://en.wikipedia.org/wiki/Iterated_function_system )
 What is this Project?
 ---------------------
 
-This project is a Python implementation of a kind of IFS. Each system
-is a stochastic composition of two-dimensional linear functions.
+This project is a implementation of a kind of IFS. Each system is a stochastic
+composition of two-dimensional linear functions.
 
 Why?
 ---
 
-I wanted to learn more about the pure functional Haskell programming
-language as well as about this beautiful fractal like mathematical
+I wanted to learn more about these beautiful fractal like mathematical
 structures.
 
-The system are configured by Python files, _e. g._:
+The system are configured by json files, _e. g._:
 
-    iterations = 28
+    {
+        "iterations": 28,
+        "width": 800,
+        "heigth": 600,
+        "transformations": [
+            ["1",  "0, .16*y"],
+            ["7",  ".2*x -.26*y, .23*x + .22*y + 1.6"],
+            ["7",  "-.15*x + .28*y, .26*x + .24*y + .44"],
+            ["85", ".85*x + .04*y, -.04*x + .85*y + 1.6"]
+        ]
+    }
 
-    width = 800
-    heigth = 600
-
-    transformations = (
-        (1,  lambda x, y, z: (0, .16*y, 0)),
-        (7,  lambda x, y, z: (.2*x -.26*y, .23*x + .22*y + 1.6, 0)),
-        (7,  lambda x, y, z: (-.15*x + .28*y, .26*x + .24*y + .44, 0)),
-        (85, lambda x, y, z: (.85*x + .04*y, -.04*x + .85*y + 1.6, 0))
-    )
-
-The system is defined by the "transformations" dictionary. It's a mapping
-of probability to the transformation lambda function. Each dictionary
-key is a proportional probability of that transformation to occur, and
-each function must accept three numerical parameters and return the same
-structure as a list like object.
+The system is defined by the "transformations" list. It's a mapping of
+probability to the transformation function. Each number (first element of each
+transformation) is a proportional probability of that transformation to occur,
+and each function is an expression transforming a `x` and `y` arguments into
+another two-dimensional point (comma separated).
 
 The sum of the probability keys are not necessary to sum to unity, as
 the probability is calculated proportionally (_i. e._ roulette wheel).
