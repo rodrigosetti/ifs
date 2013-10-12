@@ -59,22 +59,22 @@ Examples
 The [Barnsley's Fern](http://en.wikipedia.org/wiki/Barnsley_fern) resembles
 remarkably the Black Spleenwort:
 
-![Barnsley's Fern](images/barnsley-fern.png?raw=true):
+![Barnsley's Fern](images/barnsley-fern.png?raw=true)
 
 The Pentadentrite is a variation of the [McWorter's
 pentigree](http://ecademy.agnesscott.edu/~lriddle/ifs/pentigre/pentigre2.htm):
 
-![Pentadentrite](images/pentadentrite.png?raw=true):
+![Pentadentrite](images/pentadentrite.png?raw=true)
 
 A very beautiful spiral fractal:
 
-![Spiral](images/spiral.png?raw=true):
+![Spiral](images/spiral.png?raw=true)
 
 And, of course, the
 [Sierpinksi](http://en.wikipedia.org/wiki/Sierpinski_triangle) triangle, which
 seems to pop up everywhere:
 
-![Sierpinksi](images/sierpinksi.png?raw=true)
+![Sierpinksi](images/sierpinski.png?raw=true)
 
 Try modifying or creating new formulas, it's fascinating to discover new
 patterns.
