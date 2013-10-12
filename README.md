@@ -74,7 +74,7 @@ And, of course, the
 [Sierpinksi](http://en.wikipedia.org/wiki/Sierpinski_triangle) triangle, which
 seems to pop up everywhere:
 
-![Sierpinksi](images/sierpinksi.png?raw=true):
+![Sierpinksi](images/sierpinksi.png?raw=true)
 
 Try modifying or creating new formulas, it's fascinating to discover new
 patterns.
