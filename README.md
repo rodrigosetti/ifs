@@ -32,17 +32,19 @@ structures.
 
 The system are configured by json files, _e. g._:
 
-    {
-        "iterations": 28,
-        "width": 800,
-        "heigth": 600,
-        "transformations": [
-            ["1",  "0, .16*y"],
-            ["7",  ".2*x -.26*y, .23*x + .22*y + 1.6"],
-            ["7",  "-.15*x + .28*y, .26*x + .24*y + .44"],
-            ["85", ".85*x + .04*y, -.04*x + .85*y + 1.6"]
-        ]
-    }
+```json
+{
+    "iterations": 28,
+    "width": 800,
+    "heigth": 600,
+    "transformations": [
+        ["1",  "0, .16*y"],
+        ["7",  ".2*x -.26*y, .23*x + .22*y + 1.6"],
+        ["7",  "-.15*x + .28*y, .26*x + .24*y + .44"],
+        ["85", ".85*x + .04*y, -.04*x + .85*y + 1.6"]
+    ]
+}
+```
 
 The system is defined by the "transformations" list. It's a mapping of
 probability to the transformation function. Each number (first element of each
